@@ -1,0 +1,39 @@
+h2.story-title {
+	white-space: normal;
+	height: 3.6em;
+}
+
+.red {
+	background: #a30;
+}
+
+input.error {
+	border: 1px solid #a10;
+}
+
+p.error {
+	color: #d9534f;
+}
+
+.wrapper {
+	width: 200px;
+	margin: 30px auto;
+}
+
+.form-group {
+
+}
+
+input.form-control {
+	display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}

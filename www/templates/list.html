@@ -1,0 +1,39 @@
+<ion-view view-title="Reddit">
+  <ion-content>
+    <ion-refresher
+      pulling-text="Refreshing"
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="list">
+      <div ng-repeat="story in stories track by story.id"
+      ng-switch on="story.thumbnail.startsWith('http')">
+        <a ng-switch-when="true"
+          class="item item-thumbnail-left"
+          href="{{story.url}}"
+          target="_blank">
+          <img ng-src="{{story.thumbnail}}">
+          <h2 class="story-title">{{story.title}}</h2>
+          <p>
+            <span am-time-ago="story.created_utc" am-preprocess="unix"></span>
+             -
+            {{story.domain}}
+          </p>
+        </a>
+        <a ng-switch-default
+          class="item"
+          href="{{story.url}}"
+          target="_blank">
+          <h2 class="story-title">{{story.title}}</h2>
+          <p>
+            <span am-time-ago="story.created_utc" am-preprocess="unix"></span>
+             -
+            {{story.domain}}
+          </p>
+        </a>
+    </div>
+    <ion-infinite-scroll
+      on-infinite="loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
