@@ -15,15 +15,6 @@ p.error {
 	color: #d9534f;
 }
 
-.wrapper {
-	width: 200px;
-	margin: 30px auto;
-}
-
-.form-group {
-
-}
-
 input.form-control {
 	display: block;
   width: 100%;

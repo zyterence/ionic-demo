@@ -15,7 +15,8 @@ angular.module('starter.controllers', [])
   }
 
   $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
+    scope: $scope,
+    animation: 'slide-in-left'
   }).then(function(modal) {
     $scope.modal = modal;
   });
