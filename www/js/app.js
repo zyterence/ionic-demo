@@ -1,4 +1,9 @@
-angular.module('starter', ['ionic', 'angularMoment', 'starter.controllers'])
+angular.module('starter', [
+  'ionic',
+  'ngCordova',
+  'angularMoment',
+  'starter.controllers'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
